@@ -1,5 +1,3 @@
-<%= link_to 'New Article', new_article_path %>
-
 <h1>Listing Article</h1>
 <table>
   <tr>
@@ -13,10 +11,6 @@
       <td><%= article.title %></td>
       <td><%= article.text %></td>
       <td><%= link_to 'show', article_path(article) %></td>
-      <td><%= link_to 'edit', edit_article_path(article) %></td>
-      <td><%= link_to 'Destroy', article_path(article),
-                      method: :delete,
-                      data: { confirm: 'Are you sure?' } %></td>
   <% end %>
 
 </table>

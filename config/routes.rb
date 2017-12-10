@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+
+get '/admin', to: 'admin#index', as: 'admins'
+
+get '/admin/:id', to: 'admin#show', as: 'admin'
+
+get '/admin/:article_id/comments/:id/edit', to: 'comments#edit', as: "edit_admin_comment"
+
+
+
+  get 'rails/generate'
+
+  get 'rails/controller'
+
+  get 'rails/articles'
+
+  get 'rails/admin'
+
   resources :contacts
   get 'welcome/index'
 
@@ -10,4 +27,5 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
+
 end
