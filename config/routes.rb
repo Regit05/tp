@@ -6,7 +6,8 @@ get '/admin/:id', to: 'admin#show', as: 'admin'
 
 get '/admin/:article_id/comments/:id/edit', to: 'comments#edit', as: "edit_admin_comment"
 
-
+get '/informations/a-propos', to: 'informations#a_propos', as: 'informations_a_propos'
+get '/informations/cgu', to: 'informations#cgu', as: 'informations_cgu'
 
   get 'rails/generate'
 

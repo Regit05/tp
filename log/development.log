@@ -14375,3 +14375,1473 @@ Processing by AdminController#show as HTML
 Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-11 10:33:16 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (2.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (5.5ms)
+  Rendered admin/show.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 239ms (Views: 207.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 10:35:21 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 52ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-11 10:35:23 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 47ms (Views: 40.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 10:35:25 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (2.3ms)
+  Rendered comments/_form_new.html.erb (5.5ms)
+  Rendered articles/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 53ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 10:35:37 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 50ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 10:35:44 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 10:35:45 +0100
+Processing by AdminController#index as HTML
+Filter chain halted as #<Proc:0x00007f8bbfe0fb08@/usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 10:35:50 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 50ms (Views: 46.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-12-11 10:35:58 +0100
+Processing by ContactsController#index as HTML
+Filter chain halted as #<Proc:0x00007f8bc16f7a08@/usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-12-11 10:36:08 +0100
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 39ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-12-11 10:36:11 +0100
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (4.5ms)
+  Rendered contacts/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 55ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-12-11 10:36:30 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lFVuxtHoLUmkUasHTdPrb46aPPNAc1ARgi/Xvm8qUNEczu5kDvgnwyCKYWiEvewrkgmwCnkAY+I2rmB2auabeQ==", "contact"=>{"name"=>"Contact1", "email"=>"email1@gmail.com", "message"=>"message1"}, "commit"=>"Create Contact"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Contact1"], ["email", "email1@gmail.com"], ["message", "message1"], ["created_at", "2017-12-11 09:36:30.140044"], ["updated_at", "2017-12-11 09:36:30.140044"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contacts/2
+Completed 302 Found in 11ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/contacts/2" for 127.0.0.1 at 2017-12-11 10:36:30 +0100
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-12-11 10:36:32 +0100
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts/2/edit" for 127.0.0.1 at 2017-12-11 10:36:35 +0100
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering contacts/edit.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (3.0ms)
+  Rendered contacts/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 51ms (Views: 38.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 17:13:24 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 220ms (Views: 206.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 17:13:30 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 59ms (Views: 52.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 17:13:33 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 17:13:38 +0100
+Processing by AdminController#index as HTML
+Filter chain halted as #<Proc:0x00007f8bbfe0fb08@/usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 17:13:43 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 50ms (Views: 46.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-12-11 17:13:46 +0100
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (4.5ms)
+  Rendered articles/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 51ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2017-12-11 17:13:50 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ch4yt+j2Pd0gH9gFHSuD7dbW60N/LnnaapP49kARnACEnAj62ZmS5yFQK4HLdhxFaAHoxwYCKyViNkJWJf7LKw==", "article"=>{"title"=>"", "text"=>""}, "commit"=>"Create Article"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (5.9ms)
+  Rendered articles/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 62ms (Views: 41.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 17:13:53 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 78ms (Views: 73.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-12-11 17:13:54 +0100
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.4ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 63ms (Views: 57.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2017-12-11 17:13:58 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.5ms)
+  Rendered articles/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 43ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/11" for 127.0.0.1 at 2017-12-11 17:14:04 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dpW8E0HRx0IyPTju34RJDi3MBB+9P4nNzRdF4/4w5HESP4vpOzGkMyIwA62yo2zusI77iycDgXIOQxHx0bagkg==", "id"=>"11"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 11]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 11]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 17:14:04 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-11 17:14:20 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+Filter chain halted as #<Proc:0x00007f8bbfe0fb08@/usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-11 17:14:24 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (1.9ms)
+  Rendered admin/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 44ms (Views: 36.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2017-12-11 17:14:30 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+Filter chain halted as #<Proc:0x00007f8bbda4e4f8@/usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/1/edit" for 127.0.0.1 at 2017-12-11 17:14:30 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (7.0ms)
+  Rendered articles/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/1/comments/18/edit" for 127.0.0.1 at 2017-12-11 17:14:34 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"article_id"=>"1", "id"=>"18"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (1.7ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 1], ["id", 18], ["LIMIT", 1]]
+  Rendering comments/edit.html.erb within layouts/application
+  Rendered comments/_form_update.html.erb (3.2ms)
+  Rendered comments/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 56ms (Views: 46.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 17:14:42 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 17:14:45 +0100
+Processing by AdminController#index as HTML
+Filter chain halted as #<Proc:0x00007f8bbfe0fb08@/usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.1.4/lib/action_controller/metal/http_authentication.rb:70> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 17:14:45 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-12-11 17:14:46 +0100
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 79ms (Views: 75.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-12-11 17:14:48 +0100
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (2.7ms)
+  Rendered contacts/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 42ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-12-11 17:18:09 +0100
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (2.9ms)
+  Rendered contacts/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/informations/a-propos" for 127.0.0.1 at 2017-12-11 17:28:56 +0100
+  
+SyntaxError (/Users/admin/Desktop/RUBY/tp/config/routes.rb:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+ 'informations#a_propos', as 'informations_a_propos'
+                              ^):
+  
+config/routes.rb:9: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+Started GET "/informations/a-propos" for 127.0.0.1 at 2017-12-11 17:29:12 +0100
+Processing by InformationsController#a_propos as HTML
+  Rendering informations/a_propos.html.erb within layouts/application
+  Rendered informations/a_propos.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 184ms (Views: 180.1ms)
+
+
+Started GET "/informations/cgu" for 127.0.0.1 at 2017-12-11 17:30:42 +0100
+Processing by InformationsController#cgu as HTML
+  Rendering informations/cgu.html.erb within layouts/application
+  Rendered informations/cgu.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 29.9ms)
+
+
+Started GET "/informations/cgu" for 127.0.0.1 at 2017-12-11 17:30:54 +0100
+Processing by InformationsController#cgu as HTML
+  Rendering informations/cgu.html.erb within layouts/application
+  Rendered informations/cgu.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 41ms (Views: 37.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 18:46:40 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 32.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-11 18:46:42 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 70ms (Views: 57.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 18:46:46 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (10.0ms)
+  Rendered comments/_form_new.html.erb (4.5ms)
+  Rendered articles/show.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 71ms (Views: 51.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 18:47:01 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 52ms (Views: 47.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-11 18:47:02 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.1ms)
+  Rendered admin/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 115ms (Views: 97.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 18:47:40 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 86ms (Views: 81.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-11 18:47:47 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 67ms (Views: 62.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 18:47:49 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (3.3ms)
+  Rendered comments/_form_new.html.erb (3.3ms)
+  Rendered articles/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 57ms (Views: 49.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 18:47:58 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (2.6ms)
+  Rendered comments/_form_new.html.erb (2.7ms)
+  Rendered articles/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 52ms (Views: 46.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 18:48:20 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (1.6ms)
+  Rendered comments/_form_new.html.erb (3.8ms)
+  Rendered articles/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 46ms (Views: 40.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 18:58:15 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (1.6ms)
+  Rendered comments/_form_new.html.erb (4.2ms)
+  Rendered articles/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 48ms (Views: 42.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 18:58:24 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (1.5ms)
+  Rendered comments/_form_new.html.erb (4.7ms)
+  Rendered articles/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 52ms (Views: 45.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 18:58:30 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (1.5ms)
+  Rendered comments/_form_new.html.erb (2.9ms)
+  Rendered articles/show.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 55ms (Views: 49.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 18:59:10 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (1.8ms)
+  Rendered comments/_form_new.html.erb (2.8ms)
+  Rendered articles/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 46ms (Views: 41.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 18:59:38 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (1.6ms)
+  Rendered comments/_form_new.html.erb (2.5ms)
+  Rendered articles/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 18:59:42 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-11 18:59:46 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 18:59:49 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 67ms (Views: 60.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 19:02:36 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 63ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:02:43 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 55ms (Views: 50.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:03:28 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:03:42 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:03:47 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:03:54 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 67ms (Views: 63.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:04:12 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:04:22 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:04:45 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 77ms (Views: 74.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:05:01 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:06:10 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 65ms (Views: 62.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:06:46 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 79ms (Views: 75.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:06:59 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:07:16 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:07:30 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 64ms (Views: 60.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:08:01 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:08:09 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 68ms (Views: 65.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:08:46 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 68ms (Views: 64.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:08:58 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:09:03 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 19:09:53 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-11 19:10:43 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (1.6ms)
+  Rendered admin/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 44ms (Views: 35.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 19:11:10 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-11 19:11:18 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 19:11:20 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (2.0ms)
+  Rendered comments/_form_new.html.erb (2.9ms)
+  Rendered articles/show.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 50ms (Views: 43.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 19:17:27 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered comments/_show.html.erb (1.4ms)
+  Rendered comments/_form_new.html.erb (2.8ms)
+  Rendered articles/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 52ms (Views: 48.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/" for 127.0.0.1 at 2017-12-11 19:17:32 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 37ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 19:17:37 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 19:18:00 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 21:15:00 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 172ms (Views: 154.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 21:15:22 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 155ms (Views: 151.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 21:15:37 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 71ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 21:15:47 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-11 21:15:52 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 49ms (Views: 42.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/14" for 127.0.0.1 at 2017-12-11 21:32:18 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 14]]
+  Rendered comments/_show.html.erb (1.9ms)
+  Rendered comments/_form_new.html.erb (4.8ms)
+  Rendered articles/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 62ms (Views: 53.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-11 21:32:32 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/9" for 127.0.0.1 at 2017-12-11 21:32:35 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 9]]
+  Rendered comments/_show.html.erb (1.5ms)
+  Rendered comments/_form_new.html.erb (7.4ms)
+  Rendered articles/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 53ms (Views: 45.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 21:33:33 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 40ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-12-11 21:35:34 +0100
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.7ms)
+  Rendered articles/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 40ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-11 21:35:52 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (1.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (1.4ms)
+  Rendered admin/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 55ms (Views: 47.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-11 21:36:13 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (3.0ms)
+  Rendered admin/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 64ms (Views: 53.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-12-11 21:36:30 +0100
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 61ms (Views: 53.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-12-11 21:36:36 +0100
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (7.0ms)
+  Rendered contacts/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 96ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 21:41:12 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 71ms (Views: 67.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 21:42:52 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 94ms (Views: 91.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 21:44:09 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 21:44:13 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-11 21:44:57 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (2.9ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (1.7ms)
+  Rendered admin/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 50ms (Views: 41.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-11 22:20:24 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (3.9ms)
+  Rendered admin/show.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 158ms (Views: 113.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-11 22:20:31 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.9ms)
+  Rendered admin/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 90ms (Views: 79.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-11 22:20:33 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.8ms)
+  Rendered admin/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 97ms (Views: 85.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 22:20:56 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 82ms (Views: 77.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-11 22:20:58 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 117ms (Views: 105.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-12-11 22:20:59 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (33.0ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for #<Article:0x00007f8bc34d5098>):
+    1: <img width="400px" src="<%= @article.image_url %>">
+    2: 
+    3: <p>
+    4:   <strong>Title:</strong>
+  
+app/views/articles/show.html.erb:1:in `_app_views_articles_show_html_erb___1162936289411588048_70119126878280'
+Started GET "/articles" for 127.0.0.1 at 2017-12-11 22:21:05 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 86ms (Views: 78.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 22:22:15 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 22:22:37 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 49ms (Views: 42.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-12-11 22:22:39 +0100
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.5ms)
+  Rendered articles/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 48ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2017-12-11 22:22:46 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0fefXpji6zpaSKDMBzJAVUuaI5PzULfWz0hAr2gRA6YZV0ot3DkvWOQg39mYn8QoiNB0+DdRM+KhVwswJIwNrQ==", "article"=>{"title"=>"Create", "text"=>"ftghjkl"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Create"], ["text", "ftghjkl"], ["created_at", "2017-12-11 21:22:46.834935"], ["updated_at", "2017-12-11 21:22:46.834935"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/15
+Completed 302 Found in 10ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/admin/15" for 127.0.0.1 at 2017-12-11 22:22:46 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 15]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered admin/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 35.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/15" for 127.0.0.1 at 2017-12-11 22:22:54 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for #<Article:0x00007f8bc13842b8>):
+    1: <img width="400px" src="<%= @article.image_url %>">
+    2: 
+    3: <p>
+    4:   <strong>Title:</strong>
+  
+app/views/articles/show.html.erb:1:in `_app_views_articles_show_html_erb___1162936289411588048_70119109391040'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+[0m
+Started GET "/articles/15" for 127.0.0.1 at 2017-12-11 22:24:24 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (17.5ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for #<Article:0x00007f8bc16d3bf8>):
+    1: <img width="400px" src="<%= @article.image_url %>">
+    2: 
+    3: <p>
+    4:   <strong>Title:</strong>
+  
+app/views/articles/show.html.erb:1:in `_app_views_articles_show_html_erb___1162936289411588048_70119111294100'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+[0m
+Started GET "/articles/15" for 127.0.0.1 at 2017-12-11 22:33:45 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for #<Article:0x00007f8bc21f9690>):
+    1: <img width="400px" src="<%= @article.image_url %>">
+    2: 
+    3: <p>
+    4:   <strong>Title:</strong>
+  
+app/views/articles/show.html.erb:1:in `_app_views_articles_show_html_erb___1162936289411588048_70119075452580'
+Started GET "/articles/15" for 127.0.0.1 at 2017-12-11 22:35:41 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for #<Article:0x00007f8bbd49caa0>):
+    1: <%= @article.image_url %>
+    2: 
+    3: <p>
+    4:   <strong>Title:</strong>
+  
+app/views/articles/show.html.erb:1:in `_app_views_articles_show_html_erb___1162936289411588048_70119076445800'
+Started GET "/articles/15" for 127.0.0.1 at 2017-12-11 22:45:32 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for #<Article:0x00007f8bbdd62130>):
+    1: <%= @article.image_url %>
+    2: 
+    3: <p>
+    4:   <strong>Title:</strong>
+  
+app/views/articles/show.html.erb:1:in `_app_views_articles_show_html_erb___1162936289411588048_70119119079740'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddArticlesImage (20171211220238)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "articles" ADD "title" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddArticlesImage (20171211220238)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "articles" ADD "title" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "articles"[0m
+Started GET "/articles/15" for 127.0.0.1 at 2017-12-11 23:09:08 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddArticlesImage (20171211220238)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "articles" ADD "title" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/articles/15" for 127.0.0.1 at 2017-12-11 23:09:59 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/articles/15" for 127.0.0.1 at 2017-12-11 23:10:15 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for #<Article:0x00007f8bc17e2760>):
+    1: <%= @article.image_url %>
+    2: 
+    3: <p>
+    4:   <strong>Title:</strong>
+  
+app/views/articles/show.html.erb:1:in `_app_views_articles_show_html_erb___1162936289411588048_70119108932440'
+Started GET "/articles/15" for 127.0.0.1 at 2017-12-11 23:10:46 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 15]]
+  Rendered comments/_show.html.erb (1.3ms)
+  Rendered comments/_form_new.html.erb (11.5ms)
+  Rendered articles/show.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 68ms (Views: 63.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-12-11 23:19:38 +0100
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.7ms)
+  Rendered articles/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 51ms (Views: 37.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-11 23:19:42 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-11 23:19:45 +0100
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-11 23:19:47 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 42ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-12-11 23:19:50 +0100
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 78ms (Views: 66.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/contacts/new" for 127.0.0.1 at 2017-12-11 23:19:52 +0100
+Processing by ContactsController#new as HTML
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (3.8ms)
+  Rendered contacts/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 48ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-12-11 23:21:18 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8yv0OlceW7mIfpaLagiMag2jCpEtgG6hE74gfxfVRaMaNn7Cl3yNUKunlQHbzuz/tCwRB/O5daA8dmficOS4RQ==", "contact"=>{"name"=>"ftghjn", "email"=>"tgyhu", "message"=>"yghj"}, "commit"=>"Create Contact"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (5.5ms)
+  Rendered contacts/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 45ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-12-11 23:21:28 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dcHwbXEVTIAPuu+G42Htvi797ES/nFA0BzCpnLTBCuxvbuQ1zvzuaZSeQh63qsaTCa2ojcDPKFhNwjOnK/vyEw==", "contact"=>{"name"=>"", "email"=>"tgyhu", "message"=>"yghj"}, "commit"=>"Create Contact"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (4.7ms)
+  Rendered contacts/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 58ms (Views: 51.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-12-11 23:21:34 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WpZWTq/Tv2nFdz6SPGphAlwyFjudrvW0Bsf+Zy67FflAOUIWEDodgF5TkwpooUove2JS8uL9jdhMNWRcsYHtBg==", "contact"=>{"name"=>"fghbj", "email"=>"tgyhu@", "message"=>"yghj"}, "commit"=>"Create Contact"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (2.7ms)
+  Rendered contacts/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 42ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-12-11 23:21:36 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4AOBBAoFH5YwTlGC9L1tpbtC1ybn3hkLr6S73nL/3lH6rJVctey9f6tq/BqgdkaInBKT75iNYWflViHl7cUmrg==", "contact"=>{"name"=>"fghbj", "email"=>"tgyhu@drfgh", "message"=>"yghj"}, "commit"=>"Create Contact"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (3.9ms)
+  Rendered contacts/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 47ms (Views: 42.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-12-11 23:21:40 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ej+822GeSz2r3XRsEwy9iWCVw+8d/eIPjOXLQxbt3JgIkKiD3nfp1DD52fRHx5akR8WHJmKummPGF1F4idckZw==", "contact"=>{"name"=>"fghbj", "email"=>"tgyhu@drfgh.", "message"=>"yghj"}, "commit"=>"Create Contact"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (3.3ms)
+  Rendered contacts/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 42ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-12-11 23:21:42 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujiRdbw6RSp5tL93bebCd2M+2Xx3Z9GdL/gx5/mTy6Sgl4UtA9Pnw+KQEu85LelaRG6dtQg0qfFlCqvcZqkzWw==", "contact"=>{"name"=>"fghbj", "email"=>"tgyhu@drfgh.de", "message"=>"yghj"}, "commit"=>"Create Contact"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/_form.html.erb (4.3ms)
+  Rendered contacts/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2017-12-11 23:21:46 +0100
+Processing by ContactsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1OYdCD0PsEgw8VD91UEJfBFkgFyxN6EAxlcsFypGxfbOSQlQguYSoavV/WWBiiJRNjTElc5k2WyMpbYstXw9CQ==", "contact"=>{"name"=>"fghbj", "email"=>"tgyhu@drfgh.de", "message"=>"yghjrdfghjnk,l"}, "commit"=>"Create Contact"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "fghbj"], ["email", "tgyhu@drfgh.de"], ["message", "yghjrdfghjnk,l"], ["created_at", "2017-12-11 22:21:46.990220"], ["updated_at", "2017-12-11 22:21:46.990220"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contacts/3
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/contacts/3" for 127.0.0.1 at 2017-12-11 23:21:47 +0100
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-12-11 23:21:50 +0100
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/contacts/3" for 127.0.0.1 at 2017-12-11 23:21:53 +0100
+Processing by ContactsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LOSW4HRfqJ3ZqPmBDyKcqXnIqQAqRc6oIJAbFnayGno2S4K4y7YKdEKMVBlb6beEXpjtyVUWtsRqYoEt6YjihQ==", "id"=>"3"}
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "contacts" WHERE "contacts"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/contacts
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2017-12-11 23:21:53 +0100
+Processing by ContactsController#index as HTML
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 0.3ms)
+
+

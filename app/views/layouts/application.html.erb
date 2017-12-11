@@ -9,6 +9,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div>
+        <%= yield %>
+    </div>
+
+    <div>
+        <%= link_to 'A propos', informations_a_propos_path %> |
+        <%= link_to 'CGU', informations_cgu_path %>
+    </div>
   </body>
 </html>
