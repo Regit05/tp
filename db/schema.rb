@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20171010160509) do
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
   end
 
   create_table "comments", force: :cascade do |t|
