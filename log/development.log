@@ -16597,3 +16597,689 @@ Processing by AdminController#show as HTML
 Completed 200 OK in 35ms (Views: 30.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/articles/22/edit" for 127.0.0.1 at 2017-12-12 11:45:41 +0100
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.0ms)
+  Rendered articles/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 45ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:15 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 47ms (Views: 41.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/1" for 127.0.0.1 at 2017-12-12 11:46:25 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.0ms)
+  Rendered admin/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 48ms (Views: 42.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/1" for 127.0.0.1 at 2017-12-12 11:46:28 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TItnYXYD+8G0SXUnuI6pZPFMQhB2Nu7BRmb40kYPu9dWJHM5yepZKC9t2L/sRYJJ1hwG2Qlllq0MlGLp2TVDKA==", "id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 18]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 10ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:28 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 56ms (Views: 52.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/articles/2" for 127.0.0.1 at 2017-12-12 11:46:30 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h14BFWgVXnLECrWd3lwPqL3HceTtOy4shRmpCk1k/4Gd8RVN1/z8m18uGAWKlySFmpc1LZJoVkDP6zMx0l4Hfg==", "id"=>"2"}
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 2]]
+  [1m[35mSQL (1.7ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 2]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 14ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:30 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/3" for 127.0.0.1 at 2017-12-12 11:46:32 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lGS+apvE4rYLLVYh2pDYZLbKFFHnMtmEozjf+IV/KV6Oy6oyJC1AX5AJ+7mOW/NJkZpQmJhhoejpykXDGkXRoQ==", "id"=>"3"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 3]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 3]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 13ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:32 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 50ms (Views: 46.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/4" for 127.0.0.1 at 2017-12-12 11:46:34 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"k0MuXwWmldi57pIIX7D28TJUhp4OghPhugoudMfrZwGJ7DoHuk83MSLKP5ALe93cFQTCV3HRa43w+LRPWNGf/g==", "id"=>"4"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 4]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 11ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:34 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 73ms (Views: 67.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/articles/5" for 127.0.0.1 at 2017-12-12 11:46:36 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sum4pVWEpfMDF7cNi8Krv0pdsHZQdpwvWrIPpnjXM0SoRqz96m0HGpgzGpXfCYCSbQ30vy8l5EMQQJWd5+3Luw==", "id"=>"5"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 5]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 5]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 12ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:36 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/6" for 127.0.0.1 at 2017-12-12 11:46:38 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UZwbxdGijtcS1FUTN59uJUR8UFDhT76NfCGiFhR/gTtLMw+dbkssPonw+ItjVEUIYywUmZ4cxuE20zgti0V5xA==", "id"=>"6"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 6]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 11]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 6]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 14ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:38 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 49ms (Views: 43.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/9" for 127.0.0.1 at 2017-12-12 11:46:40 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oKX8aNcz8XZiv3bvpghQqPP+iL5Fwili/BV1G/NwCs+6CugwaNpTn/mb23fyw3uF1K7MdzqRUQ625+8gbEryMA==", "id"=>"9"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 9]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 9]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 13ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:40 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 46ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/12" for 127.0.0.1 at 2017-12-12 11:46:42 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fBmzUzU+9+yv2dqNrLk2mnKJ1knWUU+tTTO24o6vlv9mtqcLitdVBTT9dxX4ch23VdmSgKkCN8EHwSzZEZVuAA==", "id"=>"12"}
+  [1m[36mArticle Load (2.0ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 12]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 12]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 14ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:42 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 68ms (Views: 63.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/14" for 127.0.0.1 at 2017-12-12 11:46:44 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0qtHU7HTaUHdHHBiO7ONmPmptVxOveDHUgfly64n5cfIBFMLDjrLqEY43fpveKa13vnxlTHumKsY9X/wMR0dOA==", "id"=>"14"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 14]]
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 14]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 13ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:44 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 63ms (Views: 56.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/articles/15" for 127.0.0.1 at 2017-12-12 11:46:46 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"af4FbWeaomvwFPMzngdz1fc4Vy0eF/jjOfsvqjwkO3lzURE12HMAgmswXqvKzFj40GgT5GFEgI9zCbWRox7Dhg==", "id"=>"15"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 15]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 15]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:46 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 50ms (Views: 42.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/16" for 127.0.0.1 at 2017-12-12 11:46:50 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hB8n6JVzlIxgcyOR1aXektldMQjpHHnPf2I4jjHotGyesDOwKpo2ZftXjgmBbvW//g11wZZPAaM1kKK1rtJMkw==", "id"=>"16"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 16]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 16]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 11ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:50 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/17" for 127.0.0.1 at 2017-12-12 11:46:52 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0cGKp5Gdgt/nhjN+MnAhmn1WgwxJ3IpcHyvV5WAqfTzLbp7/LnQgNnyinuZmuwq3WgbHxTaP8jBV2U/e/xCFww==", "id"=>"17"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 17]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 17]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 16ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:52 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 57ms (Views: 53.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/18" for 127.0.0.1 at 2017-12-12 11:46:54 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uffEt7VI7ULRttOCvkhEadiOpJrhjhlh3xFtcLxowcSjWNDvCqFPq0qSfhrqg29E/97gU57dYQ2V4/dLI1I5Ow==", "id"=>"18"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 18]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 18]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 11ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:54 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 45ms (Views: 37.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/articles/19" for 127.0.0.1 at 2017-12-12 11:46:57 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AHod0Fc9syx0351RhhMJgERef7ZY8gEBQuVmndsbAFAa1QmI6NQRxe/7MMnS2CKtYw47fyeheW0IF/ymRCH4rw==", "id"=>"19"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 19]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 19]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:57 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/20" for 127.0.0.1 at 2017-12-12 11:46:59 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"d7Bkko2Y/be0LTOhJgA8arPcC8A1YNFx4mHLZ9AEQaJtH3DKMnFfXi8JnjlyyxdHlIxPCUozqR2ok1FcTz65XQ==", "id"=>"20"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 20]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 20]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 12ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:46:59 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 44ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/21" for 127.0.0.1 at 2017-12-12 11:47:00 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uLcglzLm4kuXqfrQPCqPYvltfiOAqtQ/CoyxEfHIz4+iGDTPjQ9AogyNV0ho4aRP3j066v/5rFNAfisqbvI3cA==", "id"=>"21"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 21]]
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 21]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 13ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:47:00 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 41ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/articles/22" for 127.0.0.1 at 2017-12-12 11:47:03 +0100
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PelynsET6OxjTmPJRqcicBbeU65XJ9e8HtMwIKIGBnEnRmbGfvpKBfhqzlESbAldMY4XZyh0r9BUIaobPTz+jg==", "id"=>"22"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 22]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 22]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 10ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:47:03 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 38ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-12-12 11:47:21 +0100
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.9ms)
+  Rendered articles/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 46ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2017-12-12 11:50:46 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"03vHfJwy7G765SdrP/vN2FEjrdcUiv4XBOmEkm2a3AYb2xIP2OkoDESNWH6gVkmlkmn6vNCLeiNq9s8NIQfSDQ==", "article"=>{"title"=>"L'AIGLE DE CHOLONGE", "text"=>"Qui ne connait l'incroyable retour de l'Empereur Napoléon en 1815? Débarqué à Golfe Juan le 2 mars 1815, il remonte jusqu'en Isère avant de bifurquer vers Paris, soulevant l'allégresse des soldats et du peuple.\r\n\r\nLa première partie de ce périple extraordinaire a donc pris le nom de Route Napoléon que nombre de touristes et de partisans de notre Empereur parcourent. Elle va de Golfe Juan jusqu'à Cholonge, non loin de Grenoble. Une statue marque la fin de cette route mythique. Or derrière la statue, la forêt a pris la forme spectaculaire d'un aigle, symbole de l'Empire.\r\n\r\nLe mystère est que l'on ne sait pas d'où vient un tel dessin! Les troupes voulaient-elles marquer le retour de leur Empereur? Les habitants voulaient-ils commémorer l'événement? La nature a-t-elle marqué le coup? L'aigle de Chollonge est l'un des monuments les plus mystérieux de France.", "image_url"=>"http://www.dream-wallpaper.com/free-wallpaper/art-wallpaper/3d-animal-wallpaper/1440x900/free-wallpaper-1.jpg"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?)[0m  [["title", "L'AIGLE DE CHOLONGE"], ["text", "Qui ne connait l'incroyable retour de l'Empereur Napoléon en 1815? Débarqué à Golfe Juan le 2 mars 1815, il remonte jusqu'en Isère avant de bifurquer vers Paris, soulevant l'allégresse des soldats et du peuple.\r\n\r\nLa première partie de ce périple extraordinaire a donc pris le nom de Route Napoléon que nombre de touristes et de partisans de notre Empereur parcourent. Elle va de Golfe Juan jusqu'à Cholonge, non loin de Grenoble. Une statue marque la fin de cette route mythique. Or derrière la statue, la forêt a pris la forme spectaculaire d'un aigle, symbole de l'Empire.\r\n\r\nLe mystère est que l'on ne sait pas d'où vient un tel dessin! Les troupes voulaient-elles marquer le retour de leur Empereur? Les habitants voulaient-ils commémorer l'événement? La nature a-t-elle marqué le coup? L'aigle de Chollonge est l'un des monuments les plus mystérieux de France."], ["created_at", "2017-12-12 10:50:46.468426"], ["updated_at", "2017-12-12 10:50:46.468426"], ["image_url", "http://www.dream-wallpaper.com/free-wallpaper/art-wallpaper/3d-animal-wallpaper/1440x900/free-wallpaper-1.jpg"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/23
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/23" for 127.0.0.1 at 2017-12-12 11:50:46 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 23]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered admin/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 40ms (Views: 33.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:50:51 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/23" for 127.0.0.1 at 2017-12-12 11:51:09 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 23]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered admin/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 53ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-12-12 11:51:15 +0100
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.0ms)
+  Rendered articles/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 44ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2017-12-12 11:54:10 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SKbcTjRXMLlbxjbHPz0OnxT9xrOtIRLhmdqimGR0XNSABgk9cIz02+WuSdKgkIri17eR2GkgltX3xekHKOlS3w==", "article"=>{"title"=>"Le renard roux : ce « voleur de poule » qui nous veut du bien", "text"=>"Le moins que l’on puisse dire, c’est qu’il n’est pas facile de sauver sa peau de renard sur notre territoire. Très officiellement affublé du statu de « nuisible », le renard roux est chassé plus de dix mois sur douze, piégé toute l’année, parfois même déterré avec l’aide d’outils de terrassement et des chiens ! Cet acharnement conduit à une hécatombe annuelle estimée entre 600 000 à 1 000 000 de renards. Pourtant, le rôle du renard dans son environnement est loin d’être sans intérêt pour l’homme.", "image_url"=>"http://darlyne1980.d.a.pic.centerblog.net/7074d0df.jpg"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Le renard roux : ce « voleur de poule » qui nous veut du bien"], ["text", "Le moins que l’on puisse dire, c’est qu’il n’est pas facile de sauver sa peau de renard sur notre territoire. Très officiellement affublé du statu de « nuisible », le renard roux est chassé plus de dix mois sur douze, piégé toute l’année, parfois même déterré avec l’aide d’outils de terrassement et des chiens ! Cet acharnement conduit à une hécatombe annuelle estimée entre 600 000 à 1 000 000 de renards. Pourtant, le rôle du renard dans son environnement est loin d’être sans intérêt pour l’homme."], ["created_at", "2017-12-12 10:54:10.929709"], ["updated_at", "2017-12-12 10:54:10.929709"], ["image_url", "http://darlyne1980.d.a.pic.centerblog.net/7074d0df.jpg"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/24
+Completed 302 Found in 9ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/admin/24" for 127.0.0.1 at 2017-12-12 11:54:10 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 24]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered admin/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 49ms (Views: 42.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-12-12 11:54:17 +0100
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.4ms)
+  Rendered articles/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2017-12-12 11:54:59 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mj5vZnOP/k7e6r4EbNx9Bd2O3Oh0Cve6/L/crCQ2Np2AkXs+zGZcp0XOE5w4F1Yo+t6YIQtZj9a2TUaXuwzOYg==", "article"=>{"title"=>"Le léopard", "text"=>"Le léopard (Panthera pardus) ou panthère est une espèce de félins de la sous-famille des panthérinés. Ce félin présente un pelage fauve tacheté de rosettes ; une forme mélanique existe également. Excellent grimpeur et sauteur, le léopard a la particularité de hisser ses proies à la fourche d'un arbre pour les mettre hors de portée des autres prédateurs.\r\n\r\nFélin solitaire et opportuniste, le léopard est largement distribué en Afrique et en Asie du Sud-Est sur de nombreux types d'habitats. La taille de la population est toutefois considérée comme en baisse par l'Union internationale pour la conservation de la nature, qui classe l'espèce comme quasi menacée. Cinq sous-espèces sont considérées comme en danger ou en danger critique d'extinction : le léopard d'Arabie, le léopard de l'Amour, le léopard de Java, le léopard de Ceylan et le léopard de Perse.", "image_url"=>"http://www.3d-wallpapers.info/wp-content/uploads/free-animal-wallpaper-leopard-wallpaper-hd.jpg?189db0&189db0"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Le léopard"], ["text", "Le léopard (Panthera pardus) ou panthère est une espèce de félins de la sous-famille des panthérinés. Ce félin présente un pelage fauve tacheté de rosettes ; une forme mélanique existe également. Excellent grimpeur et sauteur, le léopard a la particularité de hisser ses proies à la fourche d'un arbre pour les mettre hors de portée des autres prédateurs.\r\n\r\nFélin solitaire et opportuniste, le léopard est largement distribué en Afrique et en Asie du Sud-Est sur de nombreux types d'habitats. La taille de la population est toutefois considérée comme en baisse par l'Union internationale pour la conservation de la nature, qui classe l'espèce comme quasi menacée. Cinq sous-espèces sont considérées comme en danger ou en danger critique d'extinction : le léopard d'Arabie, le léopard de l'Amour, le léopard de Java, le léopard de Ceylan et le léopard de Perse."], ["created_at", "2017-12-12 10:54:59.284498"], ["updated_at", "2017-12-12 10:54:59.284498"], ["image_url", "http://www.3d-wallpapers.info/wp-content/uploads/free-animal-wallpaper-leopard-wallpaper-hd.jpg?189db0&189db0"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/25
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/25" for 127.0.0.1 at 2017-12-12 11:54:59 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 25]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered admin/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 31.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:55:03 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (4.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 50ms (Views: 40.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-12-12 11:55:06 +0100
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.6ms)
+  Rendered articles/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2017-12-12 11:56:08 +0100
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gCQzgJ8QGuWoVMU8adaPVfadvp4wBmITt1PCqekwQppIhObz28vehxY8uin2ewsoNdfp9fQH5ifZTIk2pa1MkQ==", "article"=>{"title"=>"Le perroquet, ce grand émotif", "text"=>"Des chercheurs français ont exploré les capacités sociales et émotionnelles des grands perroquets. Et découvert qu’ils utilisaient des signaux visuels comme moyens de communication.\r\n\r\nZOOLOGIE. Le rougissement est « la plus humaine de toutes les expressions », écrivait Charles Darwin en 1872 dans son livre L’Expression des émotions chez l’homme et les animaux. Une émotion, un regard porté sur nous, et voilà que notre visage vire au rouge. En cause, un afflux de sang dans les vaisseaux situés juste sous la peau. Pour le naturaliste, un tel phénomène involontaire et incontrôlable serait le propre de l’homme.\r\nDe nouvelles observations pourraient ­remettre en cause cette théorie. En scrutant le comportement de perroquets du zoo de Beauval (Loir-et-Cher), des scientifiques ont observé que des aras bleu et jaune (Ara ararauna) et des aras de Buffon (Ara ambiguus) rougissaient parfois au niveau des joues, dont la peau est partiellement ­dénuée de plumes et pourvue de vaisseaux sanguins sous-cutanés. Est-ce à dire qu’il s’agirait du même phénomène que le ­rougissement humain, incontrôlable et ­déclenché par l’émotion ? Pour l’heure, il est impossible de conclure.\r\nCapacités cognitives\r\nMais d’après l’éthologue Aline Bertin, à l’origine de ces travaux avec la chercheuse Cécile Arnould, de l’INRA Centre Val de Loire, à Tours, cela n’aurait rien d’étonnant. En ­effet, l’oiseau est déjà connu pour ses capacités cognitives : doté d’une conscience de soi, d’une grande mémoire, il peut se situer dans le temps, fabriquer un outil et résoudre des problèmes complexes. Mais ce n’est pas tout : « Comme nous, les perroquets tissent des liens sociaux solides », souligne Aline Bertin. Dans la nature, ils vivent en groupes familiaux basés sur des relations fortes. Les couples d’aras peuvent passer toute leur vie ensemble. Comment communiquent ces êtres sociaux ? Que sait-on de leur monde social et émotionnel ? « Bien peu, regrette la spécialiste du comportement des oiseaux. Les recherches sur la communication se sont concentrées principalement sur les vocalisations des oiseaux chanteurs et les postures,...", "image_url"=>"http://letoutenimage.l.e.pic.centerblog.net/v7zfvkec.jpg"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "image_url") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Le perroquet, ce grand émotif"], ["text", "Des chercheurs français ont exploré les capacités sociales et émotionnelles des grands perroquets. Et découvert qu’ils utilisaient des signaux visuels comme moyens de communication.\r\n\r\nZOOLOGIE. Le rougissement est « la plus humaine de toutes les expressions », écrivait Charles Darwin en 1872 dans son livre L’Expression des émotions chez l’homme et les animaux. Une émotion, un regard porté sur nous, et voilà que notre visage vire au rouge. En cause, un afflux de sang dans les vaisseaux situés juste sous la peau. Pour le naturaliste, un tel phénomène involontaire et incontrôlable serait le propre de l’homme.\r\nDe nouvelles observations pourraient ­remettre en cause cette théorie. En scrutant le comportement de perroquets du zoo de Beauval (Loir-et-Cher), des scientifiques ont observé que des aras bleu et jaune (Ara ararauna) et des aras de Buffon (Ara ambiguus) rougissaient parfois au niveau des joues, dont la peau est partiellement ­dénuée de plumes et pourvue de vaisseaux sanguins sous-cutanés. Est-ce à dire qu’il s’agirait du même phénomène que le ­rougissement humain, incontrôlable et ­déclenché par l’émotion ? Pour l’heure, il est impossible de conclure.\r\nCapacités cognitives\r\nMais d’après l’éthologue Aline Bertin, à l’origine de ces travaux avec la chercheuse Cécile Arnould, de l’INRA Centre Val de Loire, à Tours, cela n’aurait rien d’étonnant. En ­effet, l’oiseau est déjà connu pour ses capacités cognitives : doté d’une conscience de soi, d’une grande mémoire, il peut se situer dans le temps, fabriquer un outil et résoudre des problèmes complexes. Mais ce n’est pas tout : « Comme nous, les perroquets tissent des liens sociaux solides », souligne Aline Bertin. Dans la nature, ils vivent en groupes familiaux basés sur des relations fortes. Les couples d’aras peuvent passer toute leur vie ensemble. Comment communiquent ces êtres sociaux ? Que sait-on de leur monde social et émotionnel ? « Bien peu, regrette la spécialiste du comportement des oiseaux. Les recherches sur la communication se sont concentrées principalement sur les vocalisations des oiseaux chanteurs et les postures,..."], ["created_at", "2017-12-12 10:56:08.068508"], ["updated_at", "2017-12-12 10:56:08.068508"], ["image_url", "http://letoutenimage.l.e.pic.centerblog.net/v7zfvkec.jpg"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/26
+Completed 302 Found in 8ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/26" for 127.0.0.1 at 2017-12-12 11:56:08 +0100
+Processing by AdminController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering admin/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 26]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered admin/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 52ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 11:56:12 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-12 11:56:23 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-12 11:57:09 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for nil:NilClass):
+     9:   <% @articles.each do |article| %>
+    10:     <tr>
+    11:       <td><%= article.title %></td>
+    12:       <td><img height="100px" src="<%= @article.image_url %>"></td>
+    13:       <td><%= link_to 'show', article_path(article) %></td>
+    14:   <% end %>
+    15: 
+  
+app/views/articles/index.html.erb:12:in `block in _app_views_articles_index_html_erb___3916671612099146252_70119139058240'
+app/views/articles/index.html.erb:9:in `_app_views_articles_index_html_erb___3916671612099146252_70119139058240'
+Started GET "/articles" for 127.0.0.1 at 2017-12-12 11:57:32 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for nil:NilClass):
+     9:   <% @articles.each do |article| %>
+    10:     <tr>
+    11:       <td><%= article.title %></td>
+    12:       <td><img width="400px" src="<%= @article.image_url %>"></td>
+    13:       <td><%= link_to 'show', article_path(article) %></td>
+    14:   <% end %>
+    15: 
+  
+app/views/articles/index.html.erb:12:in `block in _app_views_articles_index_html_erb___3916671612099146252_70119117246120'
+app/views/articles/index.html.erb:9:in `_app_views_articles_index_html_erb___3916671612099146252_70119117246120'
+Started GET "/articles" for 127.0.0.1 at 2017-12-12 11:57:56 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-12 11:58:08 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-12 11:58:17 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-12 11:58:48 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-12 11:59:00 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-12 11:59:15 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-12 11:59:28 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-12-12 11:59:48 +0100
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admins" for 127.0.0.1 at 2017-12-12 12:00:03 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/admins"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin" for 127.0.0.1 at 2017-12-12 12:00:09 +0100
+Processing by AdminController#index as HTML
+  Rendering admin/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered admin/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/26" for 127.0.0.1 at 2017-12-12 12:00:32 +0100
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 26]]
+  Rendered comments/_show.html.erb (1.8ms)
+  Rendered comments/_form_new.html.erb (3.1ms)
+  Rendered articles/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 74ms (Views: 66.0ms | ActiveRecord: 0.4ms)
+
+
