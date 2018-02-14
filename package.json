@@ -1,5 +1,8 @@
 {
   "name": "app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "pg": "^7.4.1",
+    "sqlite3": "^3.1.13"
+  }
 }
