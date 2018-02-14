@@ -5,7 +5,11 @@ class AdminController < ApplicationController
 
         def connexion
             @admins = Admin.all
+
         end
+
+
+
 
         def verif_connexion
             if !session[:user]
@@ -13,7 +17,22 @@ class AdminController < ApplicationController
             end
         end
 
+        def inscription
+            @admin = Admin.new
+        end
 
+        def create
+            #render plain: params[:article].inspect
+            @admin = Admin.new(params.require(:admin).permit(:email,:password))
+            #@article.save
+            #redirect_to @article
+
+            if @admin.save
+              redirect_to connexion_path
+            else
+              render 'inscription'
+            end
+        end
 
 
 

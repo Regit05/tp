@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
 get '/admin', to: 'admin#index', as: 'admins'
 
 get '/admin/:id', to: 'admin#show', as: 'admin'
@@ -15,6 +16,7 @@ get '/changelanguage', to: 'application#changelanguage', as: 'change_language'
 
 
 get 'connexion', to: 'admin#connexion', as: 'connexion'
+post 'connexion', to: 'admin#connexion', as: 'connexion_post'
 post 'inscription', to: 'admin#create', as: 'inscription_post'
 get 'inscription', to: 'admin#inscription', as: 'inscription_get'
 
