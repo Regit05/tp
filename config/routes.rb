@@ -11,6 +11,7 @@ get '/informations/cgu', to: 'informations#cgu', as: 'informations_cgu'
 
 get 'articles/search', to: 'articles#search', as: 'articles_search'
 
+get '/changelanguage', to: 'application#changelanguage', as: 'change_language'
 
 
   get 'rails/generate'

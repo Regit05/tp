@@ -13,11 +13,10 @@
     <tr>
       <td><%= admin.title %></td>
       <td><%= admin.text %></td>
-      <td><%= link_to 'show', admin_path(admin) %></td>
-      <td><%= link_to 'edit', edit_article_path(admin) %></td>
-      <td><%= link_to 'Destroy', article_path(admin),
-                      method: :delete,
-                      data: { confirm: 'Are you sure?' } %></td>
+      <td><button class="btn" ><%= link_to 'show', admin_path(admin)%></button></td>
+      <td><button class="btn" ><%= link_to 'edit', edit_article_path(admin) %></button></td>
+      <td><button class="btn" ><%= link_to 'Destroy', article_path(admin), method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+    </tr>
   <% end %>
 
 </table>

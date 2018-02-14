@@ -15,7 +15,18 @@
 
     <div>
         <%= link_to 'A propos', informations_a_propos_path %> |
-        <%= link_to 'CGU', informations_cgu_path %>
+        <%= link_to 'CGU', informations_cgu_path %> |
+
+        <div class="container" id="lang">
+            <% if cookies[:language] %>
+                <%= cookies[:language] %>
+            <% end %>
+        </div>
+        <div id="langchange" >
+            <%= link_to "FR", change_language_path(:langue => "FR") %>
+            <%= link_to "EN", change_language_path(:langue => "EN") %>
+        </div>
     </div>
   </body>
+
 </html>
