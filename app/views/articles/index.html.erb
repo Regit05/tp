@@ -1,8 +1,16 @@
 <h1>Listing Article</h1>
+
+<%= link_to 'Rechercher un article', articles_search_path %>
+<%= form_tag articles_search_path, :method => 'get', class: '' do %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search" %>
+<% end %>
+
 <table>
   <% @articles.each do |article| %>
     <tr>
-      <td><p><%= article.title %></p>
+      <td><p><%= article.created_at %></p><p><%= article.updated_at %></p>
+      <td><p><%= article.title %> <%= article.created_at %> <%= article.updated_at %></p>
       <img height="100px" src="<%= article.image_url %>"></td>
       <td><%= link_to 'show', article_path(article) %></td>
   <% end %>

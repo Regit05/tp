@@ -1,5 +1,14 @@
-<img width="400px" src="<%= @admin.image_url %>">
+<div class="container">
+    <% if flash[:success] %>
+        <div class="alert alert-success"><%= flash[:success] %></div>
+    <% end %>
+    <%= yield %>
+</div>
 
+
+
+
+<img width="400px" src="<%= @admin.image_url %>">
 
 <p>
   <strong>Title:</strong>

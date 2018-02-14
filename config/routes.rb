@@ -9,6 +9,10 @@ get '/admin/:article_id/comments/:id/edit', to: 'comments#edit', as: "edit_admin
 get '/informations/a-propos', to: 'informations#a_propos', as: 'informations_a_propos'
 get '/informations/cgu', to: 'informations#cgu', as: 'informations_cgu'
 
+get 'articles/search', to: 'articles#search', as: 'articles_search'
+
+
+
   get 'rails/generate'
 
   get 'rails/controller'
