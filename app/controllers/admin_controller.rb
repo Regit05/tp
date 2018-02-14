@@ -1,9 +1,24 @@
 class AdminController < ApplicationController
 
-    http_basic_authenticate_with name: "user", password: "password", except: []
+    #http_basic_authenticate_with name: "user", password: "password", except: []
+     before_action :verif_connexion, except: [:connexion]
+
+        def connexion
+            @admins = Admin.all
+        end
+
+        def verif_connexion
+            if !session[:user]
+                redirect_to connexion_path
+            end
+        end
+
+
+
+
 
         def new
-          @admin = Article.new
+          @admin = Admin.new
         end
 
         def index
@@ -36,24 +51,10 @@ class AdminController < ApplicationController
           redirect_to articles_path
         end
 
-        def create
-          #render plain: params[:article].inspect
 
-          #@article = Article.new(params.require(:article).permit(:title,:text))
-          @article = Article.new(article_params)
-          #@article.save
-          #redirect_to @article
-
-          if @article.save
-            redirect_to admin_path(@article)
-          else
-            render 'new'
-          end
-        end
-
-        private
-          def article_params
-            params.require(:article).permit(:title,:text)
-          end
+         private
+              def admins_params
+                params.require(:admin).permit(:email,:password, :timestamps)
+              end
 
 end

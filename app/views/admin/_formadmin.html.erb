@@ -1,0 +1,16 @@
+<%= form_with model: @admin, local: true do |formadmin| %>
+    <p>
+      <%= formadmin.label :email %><br>
+      <%= formadmin.email_field :email %>
+    </p>
+
+    <p>
+      <%= formadmin.label :password %><br>
+      <%= formadmin.password_field :password %>
+    </p>
+
+    <p>
+      <%= formadmin.submit %>
+    </p>
+
+<% end %>

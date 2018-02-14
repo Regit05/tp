@@ -14,6 +14,10 @@ get 'articles/search', to: 'articles#search', as: 'articles_search'
 get '/changelanguage', to: 'application#changelanguage', as: 'change_language'
 
 
+get 'connexion', to: 'admin#connexion', as: 'connexion'
+post 'inscription', to: 'admin#create', as: 'inscription_post'
+get 'inscription', to: 'admin#inscription', as: 'inscription_get'
+
   get 'rails/generate'
 
   get 'rails/controller'
@@ -26,6 +30,8 @@ get '/changelanguage', to: 'application#changelanguage', as: 'change_language'
   get 'welcome/index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+
 
 
   resources :articles do
